@@ -90,6 +90,7 @@ cpp
 #define BATT_NORMAL_MAX 35
 #define BATT_WARM_MAX   40
 #define BATT_HIGH_MAX   45
+```
 🎮 Cara Penggunaan
 
 Power ON sistem
