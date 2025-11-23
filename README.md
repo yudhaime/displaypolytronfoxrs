@@ -1,6 +1,6 @@
 # ESP32 CAN Bus Temperature Monitor
 
-Monitor suhu ECU, Motor, dan Battery untuk kendaraan listrik melalui CAN Bus dengan display OLED.
+Monitor suhu ECU, Motor, dan Battery untuk kendaraan listrik POLYTRON FOX R/S melalui CAN Bus dengan display OLED.
 
 ## 📋 Fitur
 
@@ -133,6 +133,11 @@ esp32-can-temperature-monitor/
 - Jangan modifikasi kendaraan tanpa pengetahuan yang cukup
    - Saya tidak bertanggung jawab atas kerusakan yang bisa ditimbulkan jika ada kesalahan dalam mengimplementasikan kode ini
 
+- DILARANG MEMPERJUALBELIKAN kode ini baik dalam bentuk software maupun fisik (hardware)
+   - Kode belum tentu bekerja di semua jenis kendaraan Polytron bahkan untuk yang setype sekalipun, karena itu dimohon untuk tidak memperjualkan kode ini ke umum
+   - Mungkin hanya bekerja di kendaraan dengan controller Votol EM-100
+   - Kesalahan mungkin dapat membuat baterai rusak apalagi jika sistem sewa anda bisa dituntut untuk mengganti baterai yang rusak
+
 - Test di area aman sebelum digunakan di jalan
 
 
@@ -142,6 +147,7 @@ MIT License - bebas untuk digunakan dan dimodifikasi.
 
 ## 🤝 Contributing
 
-Pull requests welcome! Untuk major changes, buka issue terlebih dahulu.
+Pull requests welcome! 
+Untuk major changes, buka issue terlebih dahulu.
 
 Dibuat dengan ❤️ untuk komunitas kendaraan listrik Indonesia
