@@ -18,28 +18,34 @@ Monitor suhu ECU, Motor, dan Battery untuk kendaraan listrik melalui CAN Bus den
 ## 🛠️ Hardware Required
 
 ### Komponen:
-- ESP32 Development Board
+- ESP32 Development Board (ESP32 DOIT DEVKIT V1)
 - OLED Display SSD1306 (128x32)
-- CAN Bus Transceiver (MCP2551/SN65HVD230)
+- CAN Bus Transceiver (SN65HVD230) Kode CJMCU-230
 - Push Button
 - Kabel Jumper
+- Reducer 12v ke **5v (jika + ke pin VIN)** atau **3.3v (jika + ke pin 3v3)**
 
 ### Koneksi:
 ESP32 OLED CAN Transceiver Button
 
 3.3V ---> VCC
+
 GND ---> GND
+
 GPIO16 ---> SDA
+
 GPIO17 ---> SCL
 
 GPIO21 ---> TX
+
 GPIO22 ---> RX
+
 3.3V ---> VCC
+
 GND ---> GND
 
 GPIO25 ---> Button ---> GND (INPUT_PULLUP)
 
-text
 
 ## ⚙️ Instalasi
 
@@ -91,7 +97,9 @@ cpp
 #define BATT_WARM_MAX   40
 #define BATT_HIGH_MAX   45
 ```
-🎮 Cara Penggunaan
+
+
+## 🎮 Cara Penggunaan
 
 Power ON sistem
 Tekan tombol untuk berpindah halaman:
@@ -106,9 +114,10 @@ Normal: Operasi aman
 Warm: Perhatian, monitor terus
 High: Waspada, pertimbangkan untuk istirahat
 Over: Bahaya, hentikan penggunaan
-📁 Struktur File
 
-text
+## 📁 Struktur File
+
+```text
 esp32-can-temperature-monitor/
 ├── displaypolytronmain.ino  # Main program
 ├── config.h                 # User configuration
@@ -117,40 +126,22 @@ esp32-can-temperature-monitor/
 ├── display.h                # Display interface
 ├── display.cpp              # Display implementation
 └── README.md                # This file
-🔍 Troubleshooting
+```
 
-Display Tidak Menyala:
+## ⚠️ Safety Warning
 
-Cek koneksi SDA/SCL
-Pastikan address OLED benar (biasanya 0x3C)
-Tidak Ada Data Temperature:
+- Jangan modifikasi kendaraan tanpa pengetahuan yang cukup
+   - Saya tidak bertanggung jawab atas kerusakan yang bisa ditimbulkan jika ada kesalahan dalam mengimplementasikan kode ini
 
-Cek koneksi CAN transceiver
-Verifikasi CAN message IDs di config.h
-Pastikan kendaraan mengirim data CAN
-Button Tidak Berfungsi:
+- Test di area aman sebelum digunakan di jalan
 
-Cek koneksi button ke GPIO dan GND
-Pastikan menggunakan INPUT_PULLUP
-⚠️ Safety Warning
 
-Jangan modifikasi kendaraan tanpa pengetahuan yang cukup
-Test di area aman sebelum digunakan di jalan
-Monitor temperature secara berkala
-Hentikan penggunaan jika status "Over" muncul
-📄 License
+## 📄 License
 
 MIT License - bebas untuk digunakan dan dimodifikasi.
 
-🤝 Contributing
+## 🤝 Contributing
 
 Pull requests welcome! Untuk major changes, buka issue terlebih dahulu.
 
-📞 Support
-
-Jika ada masalah:
-
-Cek Troubleshooting section
-Buka issue di GitHub
-Deskripsikan masalah dengan detail
 Dibuat dengan ❤️ untuk komunitas kendaraan listrik Indonesia
