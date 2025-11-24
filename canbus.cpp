@@ -68,7 +68,7 @@ void updateCAN() {
         }
         // Battery Single Temperature
         else if(id == ID_BATT_SINGLE && dlc >= 6){
-            int battTemp = message.data[4];
+            int battTemp = message.data[5];
             
             if(battTemp > tempBatt){
                 tempBatt = battTemp;
