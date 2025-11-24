@@ -73,15 +73,19 @@ Edit file `config.h` untuk menyesuaikan dengan setup Anda:
 // CAN Bus
 #define CAN_TX_PIN GPIO_NUM_21
 #define CAN_RX_PIN GPIO_NUM_22
+```
+
 CAN Message IDs:
 
-cpp
+```cpp
 #define ID_CTRL_MOTOR   0x0A010810UL  // Controller & Motor
 #define ID_BATT_5S      0x0E6C0D09UL  // Battery 5-sensor
 #define ID_BATT_SINGLE  0x0A010A10UL  // Battery single
+```
+
 Temperature Thresholds:
 
-cpp
+```cpp
 // ECU (°C)
 #define ECU_NORMAL_MAX 45
 #define ECU_WARM_MAX   55
